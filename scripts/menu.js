@@ -218,3 +218,13 @@ document.getElementById('cart-button').addEventListener('click', () => {
 
     });
 });
+document.getElementById('check-out-button').addEventListener('click',()=>{
+Object.values(cartItems).forEach(e => {
+    document.getElementById("item" + e[4]).style.animation = "fade-out 0.3s";
+    setTimeout(() => {
+        document.getElementById('items').removeChild(document.getElementById(`item${e[4]}`));
+    }, 200);
+    delete cartItems[e[4]];
+    document.getElementById('total').textContent = `₱0`;
+});
+});
