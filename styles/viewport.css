@@ -224,7 +224,7 @@
 
 @media only screen and (min-width: 601px) and (max-width: 1224px) {
     #items {
-        height: 350px;
+        height: 65vh;
     }
 }
 
